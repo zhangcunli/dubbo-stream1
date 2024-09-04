@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package greetsvr;
+
+option go_package = "proto/greetsvr;greetsvr";
+
+import "proto/greetmsg/greetmsg.proto";
+
+service GreetService {
+  rpc GreetStream(stream greetmsg.GreetStreamRequest) returns (stream greetmsg.GreetStreamResponse) {}
+  rpc GreetServerStream(greetmsg.GreetServerStreamRequest) returns (stream greetmsg.GreetServerStreamResponse) {}
+}
+
+/*
+protoc --go_out=. --go_opt=paths=source_relative \
+  --go-triple_out=. --go-triple_opt=paths=source_relative \
+  proto/greetsvr/greetsvr.proto
+
+//当 message 和 service 分开定义的时候，生成的 triple 文件不正确
+//比如 greetsvr.triple.go 中，所有类似 GreetStreamRequest 消息体，都缺少相应的包头
+*/

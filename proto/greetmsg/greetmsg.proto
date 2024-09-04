@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+package greetmsg;
+
+option go_package = "proto/greetmsg;greetmsg";
+
+message GreetStreamRequest {
+  string name = 1;
+}
+
+message GreetStreamResponse {
+  string greeting = 1;
+}
+
+message GreetServerStreamRequest {
+  string name = 1;
+}
+
+message GreetServerStreamResponse {
+  string greeting = 1;
+}
+
+/*
+protoc -I . --go_out=. --go_opt paths=source_relative \
+  ./proto/greetmsg/greetmsg.proto
+
+protoc --go_out=. --go_opt=paths=source_relative \
+  --go-triple_out=. --go-triple_opt=paths=source_relative proto/greetmsg/greetmsg.proto
+*/

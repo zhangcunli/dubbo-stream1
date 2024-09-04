@@ -1,0 +1,32 @@
+syntax = "proto3";
+
+package greet;
+
+option go_package = "proto/greet;greet";
+
+message GreetStreamRequest {
+  string name = 1;
+}
+
+message GreetStreamResponse {
+  string greeting = 1;
+}
+
+message GreetServerStreamRequest {
+  string name = 1;
+}
+
+message GreetServerStreamResponse {
+  string greeting = 1;
+}
+
+service GreetService {
+  rpc GreetStream(stream GreetStreamRequest) returns (stream GreetStreamResponse) {}
+  rpc GreetServerStream(GreetServerStreamRequest) returns (stream GreetServerStreamResponse) {}
+}
+
+
+/*
+protoc --go_out=. --go_opt=paths=source_relative \
+  --go-triple_out=. --go-triple_opt=paths=source_relative proto/greet/greet.proto
+*/
