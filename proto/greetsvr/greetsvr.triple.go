@@ -15,7 +15,7 @@ import (
 	"dubbo.apache.org/dubbo-go/v3/common/constant"
 	"dubbo.apache.org/dubbo-go/v3/protocol/triple/triple_protocol"
 	"dubbo.apache.org/dubbo-go/v3/server"
-	greetmsg "gitlab.com/zhangcl/dubbo-stream1/proto/greetmsg"
+	greetmsg "github.com/zhangcunli/dubbo-stream1/proto/greetmsg"
 )
 
 // This is a compile-time assertion to ensure that this generated file and the Triple package

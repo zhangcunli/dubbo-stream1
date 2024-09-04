@@ -9,7 +9,7 @@ package greetsvr
 import (
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
-	greetmsg "gitlab.com/zhangcl/dubbo-stream1/proto/greetmsg"
+	greetmsg "github.com/zhangcunli/dubbo-stream1/proto/greetmsg"
 	reflect "reflect"
 )
 

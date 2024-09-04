@@ -11,8 +11,8 @@ import (
 	_ "dubbo.apache.org/dubbo-go/v3/imports"
 	"dubbo.apache.org/dubbo-go/v3/protocol"
 	"dubbo.apache.org/dubbo-go/v3/server"
-	"gitlab.com/zhangcl/dubbo-stream1/proto/greetmsg"
-	"gitlab.com/zhangcl/dubbo-stream1/proto/greetsvr"
+	"github.com/zhangcunli/dubbo-stream1/proto/greetmsg"
+	"github.com/zhangcunli/dubbo-stream1/proto/greetsvr"
 )
 
 func main() {

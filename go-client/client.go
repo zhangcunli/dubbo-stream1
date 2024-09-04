@@ -10,7 +10,7 @@ import (
 	"dubbo.apache.org/dubbo-go/v3/common/constant"
 	_ "dubbo.apache.org/dubbo-go/v3/imports"
 	"dubbo.apache.org/dubbo-go/v3/protocol/triple/triple_protocol"
-	"gitlab.com/zhangcl/dubbo-stream1/proto/greetmsg"
+	"github.com/zhangcunli/dubbo-stream1/proto/greetmsg"
 )
 
 func main() {
